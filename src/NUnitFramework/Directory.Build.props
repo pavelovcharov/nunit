@@ -31,6 +31,10 @@
 
     <DefineConstants Condition="'$(TargetFramework)' != 'netstandard1.4'
                             and '$(TargetFramework)' != 'netcoreapp1.1'">$(DefineConstants);PLATFORM_DETECTION</DefineConstants>
+    
+	<DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'
+							or '$(TargetFramework)' == 'netcoreapp2.0'">$(DefineConstants);APARTMENT_STATE</DefineConstants>
+	
   </PropertyGroup>
 
   <ItemGroup>
